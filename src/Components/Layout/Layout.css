@@ -1,0 +1,27 @@
+.Layout {
+	width: 100%;
+    height: 100vh;
+    /* background-color: var(--color-background); */
+}
+
+*{
+    --color-one: #EAFDFC;
+    --color-second: #BFEAF5;
+    --color-three: #705df2;
+    /* --color-three: #40c69e; */
+    --color-four: #040304;
+    --color-white: #ffffff;
+    --color-light-text:rgb(243, 243, 243);
+    --color-background:rgb(247, 247, 247);
+
+
+    --currentColor: rgb(14, 189, 1);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}

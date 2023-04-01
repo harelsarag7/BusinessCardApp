@@ -1,0 +1,50 @@
+.CreateCard form{
+	display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:  auto auto;
+}
+
+.CreateCard form input {
+    margin: 0 30px 20px 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+.CreateCard form button {
+    padding: 15px 20px;
+    border: none;
+    outline: 1px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: lightskyblue;
+    margin: auto;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.CreateCard form button:hover > span {
+    position: relative;
+    bottom: 5px;
+    transition: 0.2s;
+}
+.CreateCard form button:not(:hover) > span {
+    position: relative;
+    bottom: 0;
+    transition: 0.2s;
+}
+.CreateCard form button span {
+    position: relative; 
+    bottom:  0;
+}
+
+

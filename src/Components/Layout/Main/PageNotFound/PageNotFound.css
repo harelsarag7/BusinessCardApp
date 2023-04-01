@@ -1,0 +1,14 @@
+.PageNotFound {
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.PageNotFound h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.PageNotFound img {
+    max-width: 500px;
+}

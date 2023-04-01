@@ -1,0 +1,40 @@
+.FormStepTemplate {
+    margin-bottom: 200px;
+}
+
+.next-back-form-template {
+  display: flex;
+  justify-content: center;
+}
+.FormStepTemplate .input-container{
+	display: flex;
+    gap: 50px;
+}
+
+.FormStepTemplate img {
+    height: 400px;
+    width: 270px;
+}
+.next-back-form-template {
+    margin: 40px auto;
+}
+
+[type=radio]:checked + img {
+    outline: 3px solid rgb(131,58,180);
+    background: rgb(131,58,180);
+
+    background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(253,47,34,1) 73%, rgba(252,176,69,1) 100%);
+
+    border-radius: 25px;
+  }
+
+  .selectTemplate:hover img {
+    cursor: pointer;
+    transition: 0.2s;
+    height: 405px;
+    width: 275px;
+    margin: -5px -2.4px;
+  }
+  .input_select_template {
+    display: none;
+  }

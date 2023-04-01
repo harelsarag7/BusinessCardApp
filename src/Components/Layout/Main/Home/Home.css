@@ -1,0 +1,102 @@
+.Home {
+    margin: 100px auto;
+	text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-size: 25px;
+    
+}
+.home-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* align-items: center; */
+    position: relative;
+    left: 70px;
+}
+.home-title-sign {
+    
+    position: relative;
+    top: 40px;
+}
+.Home h1 strong {
+    color: #705df2;
+}
+.Home p {
+    font-size: 20px;
+}
+.home-sign-up {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.home-sign-up button {
+    margin-left:40px ;
+
+}
+.img-home img {
+    width: 500px;
+    position: relative;
+    /* left: 20px; */
+    animation: MoveUpDown 4s linear infinite;
+    bottom: 40px;
+}
+
+
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 40px;
+    }
+    50% {
+      bottom: 70px;
+    }
+  }
+.emoji {
+    width: 70px;
+    height: 58px;
+    position: relative;
+    margin-left: 20px;
+    /* background-image: url("./hand-emoji.jpg"); */
+}
+
+
+.register-btn-header {
+    width: 130px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 45px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    
+}
+
+.register-btn-header:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.register-btn-header:focus {
+    outline: none;
+}
+.register-btn-header {
+    background-image: linear-gradient(
+        to right,
+        #e17325,
+        #eb4a44,
+        #fe6c04,
+        #ed3f3f
+      );
+      box-shadow: 0 2px 13px 0 rgba(234, 65, 65, 0.75);
+}
