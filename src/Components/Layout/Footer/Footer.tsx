@@ -20,7 +20,8 @@ function Footer(): JSX.Element {
                 <div className="texts">
                     <h2 className="section-title">Start introducing yourself</h2>
                     <h3 className="section-sub-heading">
-                        <span> PREMIUM Cards - Only</span><strong> $5 </strong>
+                        {/* <span> PREMIUM Cards - Only</span><strong> $5 </strong> */}
+                        <span> Coming Soon - PREMIUM Cards - Only</span><strong> $5 </strong>
                         <span>for a</span> <strong>One year</strong>
                     </h3>
                 </div>
@@ -46,14 +47,14 @@ function Footer(): JSX.Element {
                 <ul>
                     <li><Link to="/Home">Home</Link></li>
                     <li><Link to="/createcardsteps">Create new Card</Link></li>
-                    <li><Link to={`/user/${userRedux?.username}`}>My Cards</Link></li>
+                    <li><Link to={`/user`}>My Cards</Link></li>
                 </ul>
             </div>
             <div className="column is-nav">
                 <div className="column-title">Contact</div>
                 <ul>
-                    <li><a href="#"><i className="fa fa-envelope-open"></i> HarelSarag7@gmail.com</a></li>
-                    <li><a href="#"><i className="fa fa-twitter"></i>@Harel_Fullstack_Developer</a></li>
+                    <li><a href="mailto:HarelSarag7@gmail.com"><i className="fa fa-envelope-open"></i> HarelSarag7@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/harel-sarag-849102234/"><i className="fa fa-twitter"></i>@Harel_Fullstack_LinkedIn</a></li>
                 </ul>
             </div>
             <div className="column is-nav">
