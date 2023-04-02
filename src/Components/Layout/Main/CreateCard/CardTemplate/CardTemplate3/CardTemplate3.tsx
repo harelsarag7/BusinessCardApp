@@ -33,7 +33,7 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
                     <div className="profile-card-social">
                          <div>
                             {card.facebook ? 
-                            <a href="https://www.facebook.com/iaMuhammedErdem" className="profile-card-social__item facebook" target="_blank">
+                            <a href={card.facebook.includes("http") ? card.facebook : "https://" + card.facebook} className="profile-card-social__item facebook" target="_blank">
                             <span className="icon-font">
                                 <svg className="icon"><use xlinkHref="#icon-facebook"></use></svg>
                             </span>
@@ -43,7 +43,7 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
 
                         <div>
                             {card.twitter ? 
-                        <a href="https://twitter.com/iaMuhammedErdem" className="profile-card-social__item twitter" target="_blank">
+                        <a href={card.twitter.includes("http") ? card.twitter : "https://" + card.twitter} className="profile-card-social__item twitter" target="_blank">
                         <span className="icon-font">
                             <svg className="icon"><use xlinkHref="#icon-twitter"></use></svg>
                         </span>
@@ -54,7 +54,7 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
                         <div>
                             {card.instagram ? 
                             
-                            <a href="https://www.instagram.com/iamuhammederdem" className="profile-card-social__item instagram" target="_blank">
+                            <a href={card.instagram.includes("http") ? card.instagram : "https://" + card.instagram} className="profile-card-social__item instagram" target="_blank">
                                 <span className="icon-font">
                                     <svg className="icon"><use xlinkHref="#icon-instagram"></use></svg>
                                 </span>
@@ -64,7 +64,7 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
 
                         <div>
                             {card.github ? 
-                        <a href="https://github.com/muhammederdem" className="profile-card-social__item github" target="_blank">
+                        <a href={card.github.includes("http") ? card.github : "https://" + card.github} className="profile-card-social__item github" target="_blank">
                         <span className="icon-font">
                             <svg className="icon"><use xlinkHref="#icon-github"></use></svg>
                         </span>
@@ -73,12 +73,10 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
                         </div>       
                             
                             
-                            {/*here will be a link to my site */ }
                             {card.website ? 
-                        <a href="" className="profile-card-social__item link" target="_blank">
+                        <a href={card.website.includes("http") ? card.website : "https://" + card.website} className="profile-card-social__item link" target="_blank">
                         <span className="icon-font">
                                 <LanguageIcon/>
-                            {/* <svg className="icon"><use xlinkHref="#icon-link"></use></svg> */}
                         </span>
                         </a>
                         : <></>}
@@ -101,35 +99,8 @@ function CardTemplate3( { card }: { card : cardModel }): JSX.Element {
                             : <></>}
 
                     </div>
-
-                    {/* <div className="profile-card-ctr">
-                        <button className="profile-card__button button--blue js-message-btn">Message</button>
-                        <button className="profile-card__button button--orange">Follow</button>
-                    </div> */}
                     </div>
-
-                    {/* <div className="profile-card-message js-message">
-                    <form className="profile-card-form">
-                        <div className="profile-card-form__container">
-                        <textarea placeholder="Say something..."></textarea>
-                        </div>
-
-                        <div className="profile-card-form__bottom">
-                        <button className="profile-card__button button--blue js-message-close">
-                            Send
-                        </button>
-
-                        <button className="profile-card__button button--gray js-message-close">
-                            Cancel
-                        </button>
-                        </div>
-                    </form>
-
-                    <div className="profile-card__overlay js-message-close"></div>
-                    </div> */}
-
                 </div>
-
                 </div>
 
                 <svg >
