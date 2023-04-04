@@ -1,4 +1,4 @@
-Digital Business Card Web Application
+# Digital Business Card Web Application
 This is a web application that allows users to create and publish their digital business cards or service cards. Users can choose from a variety of templates, upload their own photos, and add links to their social media accounts. The application is designed to be user-friendly, with a simple interface and easy-to-use features.
 
 Getting Started
