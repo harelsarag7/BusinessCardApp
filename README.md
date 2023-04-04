@@ -8,19 +8,19 @@ Features
 The Digital Business Card Web Application has the following features:
 
 • Easy sign up and login process </br>
-• Multiple templates to choose from
-• Upload your own photos
-• Add links to your social media accounts
-• Dashboard to view all of your published cards
-• Share your card with one click
+• Multiple templates to choose from <br/>
+• Upload your own photos <br/>
+• Add links to your social media accounts <br/>
+• Dashboard to view all of your published cards <br/>
+• Share your card with one click <br/> 
 
 The Digital Business Card Web Application was built using the following technologies:
 
-• HTML
-• CSS
-• JavaScript
-• Node.js
-• Express.js
-• MySQL
-• React
-• Material UI
+• HTML <br/>
+• CSS <br/>
+• JavaScript <br/>
+• Node.js <br/>
+• Express.js <br/>
+• MySQL </br>
+• React <br/>
+• Material UI <br/>
