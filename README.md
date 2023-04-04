@@ -7,7 +7,7 @@ To use the application, simply sign up for an account and log in. Once you are l
 Features
 The Digital Business Card Web Application has the following features:
 
-• Easy sign up and login process
+• Easy sign up and login process </br>
 • Multiple templates to choose from
 • Upload your own photos
 • Add links to your social media accounts
