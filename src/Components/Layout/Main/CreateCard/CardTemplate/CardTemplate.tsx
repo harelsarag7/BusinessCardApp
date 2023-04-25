@@ -35,7 +35,7 @@ function CardTemplate(): JSX.Element {
     }, [])
 
     return (
-        <div className={CardClass}>
+        <div className={`cardTemplate ${CardClass}`}>
             {/* {card?.template == 1? <CardTemplate1 key={card.id} card={card}/>
              : card?.template === 2? " WRONG Card template is 2"
               : "No template"} */}

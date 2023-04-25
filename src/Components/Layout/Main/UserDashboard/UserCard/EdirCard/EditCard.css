@@ -1,0 +1,13 @@
+.JoyModalDialog-root::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .JoyModalDialog-root::-webkit-scrollbar-thumb {
+    background-color: #1976D2; 
+    border-radius: 20px;
+  }
+  
+  .JoyModalDialog-root::-webkit-scrollbar-track {
+    background-color: #eee; 
+  }
+  

@@ -16,8 +16,10 @@ export default function EditCard({card,refresh, setRefresh}: {card: cardModel, r
 function EditCardFunction( EditedCard : cardModel) {
     let id = Number(card.id);
     console.log(card.id);
+    console.log(EditCard);
+    
     try {
-        cardFunctions.updateCard(EditedCard, id).then((res) => {
+      cardFunctions.updateCard(EditedCard, id).then((res) => {
             console.log(res);
             setOpen(false)
             setRefresh(!refresh)
@@ -43,6 +45,8 @@ function EditCardFunction( EditedCard : cardModel) {
           aria-describedby="basic-modal-dialog-description"
           sx={{
             maxWidth: 500,
+            maxHeight: '60vh',
+            overflowY: 'scroll',
             borderRadius: 'md',
             p: 3,
             boxShadow: 'lg',
@@ -72,21 +76,15 @@ function EditCardFunction( EditedCard : cardModel) {
               <TextField  defaultValue={card.businessDescription} label="businessDescription"  {...register("businessDescription")} />
               <TextField  defaultValue={card.email} label="email"  {...register("email")} />
               <TextField  defaultValue={card.phone} label="phone"  {...register("phone")} />
+              <TextField  defaultValue={card.location} label="location"  {...register("location")} />
+              <TextField  defaultValue={card.instagram} label="instagram"  {...register("instagram")} />
+              <TextField  defaultValue={card.twitter} label="twitter"  {...register("twitter")} />
+              <TextField  defaultValue={card.github} label="github"  {...register("github")} />
               <TextField  defaultValue={card.website} label="website"  {...register("website")} />
               <TextField  defaultValue={card.facebook} label="facebook"  {...register("facebook")} />
-              <TextField  defaultValue={card.location} label="location"  {...register("location")} />
               {/* <TextField label="upload" type="password" required {...register("upload")} /> */}
               <Button type="submit" variant="contained">Submit</Button>
             </Stack>
-            {/* <Typography
-            id="wrong-password-username"
-            mt={0.5}
-            mb={2}
-          >
-            {wrong}
-          </Typography> */}
-
-
           </form>
         </ModalDialog>
       </Modal>

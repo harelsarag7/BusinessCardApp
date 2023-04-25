@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
- /* html {
-	 position: relative;
-	 overflow-x: hidden !important;
-} */
- /* * {
-	 box-sizing: border-box;
-} */
- /* body {
-	 font-family: 'Quicksand', sans-serif;
-	 color: #324e63;
-}
- a, a:hover {
-	 text-decoration: none;
-} */
+
 .CardTemplate3 {
 	margin: 0 auto;
 	max-width: 350px;
