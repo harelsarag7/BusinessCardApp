@@ -298,34 +298,49 @@ function FormStepInfo( { onclick, stepBackButton}: clicksForm2Model ): JSX.Eleme
                       </div>
                      
                      <div>
-                        <label htmlFor="">Business Description:</label>
+                        <label htmlFor="">Description:</label>
                         <input onInput={(description) => onBusiDesc(description) } defaultValue={cardRedux.card? cardRedux.card.businessDescription : ""} type="text" placeholder="Business Description:" {...register("businessDescription")} />
                      </div>
                 
                     </div>
                     <div className="input-container">
 
+                    <div>
+
                         <label  htmlFor="">Phone number:</label>
                         <input  onInput={(phone) => onBusiPhone(phone)} defaultValue={cardRedux.card? cardRedux.card.phone : ""} type="text" placeholder="Phone:" {...register("phone")} />
-                      
+                    </div>
+
+                    <div>
                         <label htmlFor="">Email:</label>
                         <input onInput={(email) => onBusiEmail(email)}  defaultValue={cardRedux.card? cardRedux.card.email : ""} type="email" placeholder="Email:" {...register("email")} />
                       
-                      
+                    </div> 
+
+                    <div>
                         <label htmlFor="">Location:</label>
                         <input onInput={(location) => onBusiLocation(location)}  defaultValue={cardRedux.card? cardRedux.card.location : ""} type="text" placeholder="Adress:" {...register("location")} />
-                      
+                    </div>  
+
+                    <div>
                         <label htmlFor="website">Website:</label>
                         <input id="website" onInput={(website) => onBusiWebsite(website)}  defaultValue={cardRedux.card? cardRedux.card.website : ""} type="string" placeholder="Web site link:" {...register("website")} />
-                      
+                    </div>  
+
+                    <div>
                         <label htmlFor="facebook">Facebook:</label>
                         <input id="facebook" onInput={(facebook) => onBusiFacbook(facebook)}  defaultValue={cardRedux.card? cardRedux.card.facebook : ""} type="string" placeholder="Facebook link:" {...register("facebook")} />
-                      
+                    </div>  
+
+                    <div>
                         <label htmlFor="github">github:</label>
                         <input id="github" onInput={(github) => onBusiGithub(github)}  defaultValue={cardRedux.card? cardRedux.card.github : ""} type="string" placeholder="Github link:" {...register("github")} />
-                      
+                    </div>  
+
+                    <div>
                         <label htmlFor="twitter">Twitter:</label>
                         <input id="twitter" onInput={(twitter) => onBusiTwitter(twitter)}  defaultValue={cardRedux.card? cardRedux.card.twitter : ""} type="string" placeholder="Twitter link:" {...register("twitter")} />
+                    </div>  
 
                         {cardRedux == 1 ? 
                             <div>

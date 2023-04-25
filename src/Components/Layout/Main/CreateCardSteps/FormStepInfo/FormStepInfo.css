@@ -1,73 +1,59 @@
 .FormStepInfo {
     display: flex;
-/* margin: 0 auto;	 */
-align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 170px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.FormStepInfo form{
-	display: flex;
+  }
+  
+  .FormStepInfo form {
+    display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     padding: 10px;
+  }
+  
+  .FormStepInfo form .input-container {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
-
-.FormStepInfo form input {
-    margin: 0 30px 20px 10px;
+  }
+  
+  .FormStepInfo form label {
+    margin-right: 10px;
+  }
+  
+  .FormStepInfo form input {
+    margin: 0 30px 20px 0;
     padding: 10px;
     border: none;
     border-bottom: 1px solid black;
-}
-
-.FormStepInfo .input-container {
-    display: flex;
+    flex-grow: 1;
     max-width: 100%;
-    flex-wrap: wrap;
-}
-input:focus {
-    outline: none;
-}
-
-.next-back-form1 {
+  }
+  
+  .FormStepInfo .next-back-form1 {
+    display: flex;
+    justify-content: center;
     margin: 40px auto;
-}
-
-.FormStepInfo form button {
-    /* padding: 15px 20px;
-    border: none;
-    outline: 1px solid black;
-    width: 100%;
-    text-align: center;
-    background-color: lightskyblue;
-    margin: auto;
-    border-radius: 4px;
-    cursor: pointer; */
-    /* display: flex; */
-    /* margin: 0 auto; */
-    /* justify-content: center; */
-    padding: 10px 20px;
-
-
-}
-
-.FormStepInfo form button:hover > span {
-    position: relative;
-    bottom: 5px;
-    transition: 0.2s;
-}
-.FormStepInfo form button:not(:hover) > span {
-    position: relative;
-    bottom: 0;
-    transition: 0.2s;
-}
-.FormStepInfo form button span {
-    position: relative; 
-    bottom:  0;
-}
-
-.FormStepInfo .online-template .wrapper {
-    min-height: 200px !important; 
-}
+  }
+  
+  .FormStepInfo .next-back-form1 button {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .FormStepInfo form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    .FormStepInfo form input {
+      margin: 0 0 20px 0;
+    }
+  
+    .FormStepInfo form .input-container {
+      flex-direction: column;
+    }
+  }
+  
