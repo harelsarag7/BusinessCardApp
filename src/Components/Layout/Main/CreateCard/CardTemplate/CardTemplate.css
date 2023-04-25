@@ -1,3 +1,8 @@
+.cardTemplate {
+    margin-bottom: 300px;
+    margin-top: 40px;
+}
+
 .CardTemplate1 .card-template-container{
     display: flex;
     flex-direction: column;
