@@ -1,0 +1,35 @@
+.MobileNavBar {
+	display: none;
+}
+
+.MobileNavBar .nav_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #9689D5;
+    z-index: 999 !important;
+
+}
+
+.MobileNavBar .nav_mobile a {
+    border-bottom: none !important;
+    outline: none;
+    padding: 5px;
+
+    color: #292929;
+}
+
+.MobileNavBar .nav_mobile a .active {
+font-weight: bold;
+}
+
+@media only screen and (max-width: 680px) {
+.MobileNavBar {
+    display: block;
+    margin-left: 20px;
+}
+
+}
+

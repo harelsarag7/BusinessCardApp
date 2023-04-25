@@ -8,6 +8,9 @@ import NavBar from "./CategoriesNavBar/NavBar";
 import "./Header.css";
 import { logout } from "../../../App/authSlice";
 import logo from "./businesscardlogo.png";
+import MobileNavBar from "./MobileNavBar/MobileNavBar";
+import Register from "../Main/Auth/Register/Register";
+
 function Header(): JSX.Element {
 
     // const [user1, setUser] = useState<userModel | undefined>(undefined)
@@ -45,6 +48,7 @@ function Header(): JSX.Element {
                 <div className="categories-container">
 			        <div className="categories">
                         <NavBar/>
+                        <MobileNavBar/>
                     </div>
                  </div>
 
@@ -71,7 +75,11 @@ function Header(): JSX.Element {
                         </Menu>
                             </Avatar>
                  </div>
-                 : <Login/>
+                 : 
+                 <div className="login_register_header">
+                    <Register/>
+                     <Login/>
+                 </div>
                         }</div>
                 </div>
 

@@ -10,6 +10,7 @@ import CardTemplate1 from "../../CreateCard/CardTemplate/CardTemplate1/CardTempl
 import axios from "axios";
 import CardTemplate3 from "../../CreateCard/CardTemplate/CardTemplate3/CardTemplate3";
 import { toast, ToastContainer } from "react-toastify";
+import { config } from "../../../../../Services/config/config";
 
 type CardComponentType = ( { card } : { card: cardModel } ) => JSX.Element;
 
@@ -65,18 +66,18 @@ function FormStepInfo( { onclick, stepBackButton}: clicksForm2Model ): JSX.Eleme
             console.log(img.target.files[0]);
             let file = img.target.files[0];
             window.localStorage.setItem("image", file)
-            const url = 'http://localhost:3040/api/uploadFile';
+            const url = `${config.URL}/api/uploadFile`;
             // const url = `${config}`;
             const formData = new FormData();
 
             formData.append('file', file);
             formData.append('fileName', file.name);
-            const config = {
+            var configInfo = {
               headers: {
                 'content-type': 'multipart/form-data',
               },
             };
-            axios.post(url, formData, config).then((response) => {
+            axios.post(url, formData, configInfo).then((response) => {
               console.log(response.data);
             });
         }
@@ -291,11 +292,15 @@ function FormStepInfo( { onclick, stepBackButton}: clicksForm2Model ): JSX.Eleme
 			       <form onSubmit={handleSubmit(createCardFunction)}>
                     <div className="input-container">
                       
+                      <div>
                         <label htmlFor="">Business Name:</label>
                         <input onInput={(name) => onBusiName(name)}  defaultValue={cardRedux.card? cardRedux.card.businessName : ""} type="text" placeholder="Business Name:" {...register("businessName")} />
+                      </div>
                      
+                     <div>
                         <label htmlFor="">Business Description:</label>
                         <input onInput={(description) => onBusiDesc(description) } defaultValue={cardRedux.card? cardRedux.card.businessDescription : ""} type="text" placeholder="Business Description:" {...register("businessDescription")} />
+                     </div>
                 
                     </div>
                     <div className="input-container">
