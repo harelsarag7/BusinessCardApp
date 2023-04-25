@@ -9,6 +9,8 @@
 .FormStepTemplate .input-container{
 	display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .FormStepTemplate img {
@@ -37,4 +39,37 @@
   }
   .input_select_template {
     display: none;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    .FormStepTemplate img {
+      height: 296px;
+      width: 200px;
+  }
+
+  
+  .selectTemplate:hover img {
+    cursor: pointer;
+    transition: 0.2s;
+    height: 300px;
+    width: 205px;
+    margin: -5px -2.4px;
+  }
+  }
+
+  @media only screen and (max-width: 680px) {
+    .FormStepTemplate img {
+      height: 222px;
+      width: 150px;
+  }
+
+  
+  .selectTemplate:hover img {
+    cursor: pointer;
+    transition: 0.2s;
+    height: 227px;
+    width: 155px;
+    margin: -5px -2.4px;
+  }
   }

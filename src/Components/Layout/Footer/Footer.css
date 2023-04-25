@@ -149,7 +149,7 @@ a.button {
 }
 @media only screen and (max-width: 990px) and (min-width: 200px) {
     body {
-        height: 200vh;
+        height: 100vh;
         overflow-y: scroll;
         overflow-x: hidden;
     }

@@ -3,6 +3,8 @@
 /* margin: 0 auto;	 */
 align-items: center;
     margin-bottom: 170px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .FormStepInfo form{
 	display: flex;
@@ -20,6 +22,11 @@ align-items: center;
     border-bottom: 1px solid black;
 }
 
+.FormStepInfo .input-container {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
 input:focus {
     outline: none;
 }

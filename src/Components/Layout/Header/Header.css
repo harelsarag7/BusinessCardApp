@@ -79,11 +79,40 @@
     .container {
         width: 80%;
     }
+    .login_register_header {
+        display: flex;
+        flex-direction: column;
+    }
+    .register-btn-header {
+        height: 30px !important;
+        font-size: 15px !important;
+        margin: 5px !important;
+    }
+    .login-btn-header {
+        height: 30px;
+        font-size: 15px;
+        margin: 5px;
+    }
   }
 @media only screen and (max-width: 902px) {
     .container {
         width: 100%;
+        
     }
+
+    .Header {
+        margin-bottom: 20px;
+
+    }
+
+    .logo img{
+        position: relative;
+        top: 2px;
+        width: 130px;
+        height: 70px;
+    }
+
+
   }
 
 .categories-container{
@@ -97,3 +126,49 @@ width: 180px;
 display: flex;
 justify-content: center;
 }
+
+.login_register_header {
+    display: flex;
+}
+
+@media only screen and (max-width: 680px) {
+    .Header {
+        margin-top: 15px;
+    }
+    .logo {
+        position: absolute;
+        margin: 0 auto;
+    }
+
+    .Header .avatar-header {
+        width: 80px;
+    }
+
+ 
+ 
+    
+    }
+    
+
+@media only screen and (max-width: 480px) {
+    .logo img{
+        position: relative;
+        top: 2px;
+        width: 110px;
+        height: 60px;
+    }
+    
+    .login-btn-header {
+        width: 80px;
+        font-size: 15px;
+        height: 30px;
+    }
+
+    .register-btn-header {
+        width: 80px !important;
+        font-size: 15px !important;
+        height: 30px !important;
+    }
+ 
+    }
+    

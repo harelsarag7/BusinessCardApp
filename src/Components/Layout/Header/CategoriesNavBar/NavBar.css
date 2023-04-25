@@ -2,6 +2,7 @@
 	text-align: right;
     padding: 14px;
     margin: auto;
+    display: block;
     /* background-color: var(--color-light-text); */
 }
 .NavBar a {
@@ -28,3 +29,12 @@
     /* border-top: 1px solid rgba(48, 48, 48, 0.648) !important; */
     /* border:  2px solid  rgba(48, 48, 48, 0.648) !important; */
 }
+
+
+
+@media only screen and (max-width: 680px) {
+    .NavBar {
+        display: none;
+    }
+    
+    }
