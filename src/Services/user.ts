@@ -1,7 +1,7 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-import { cardModel } from "../Models/cardModel";
 import { userModel } from "../Models/userModel";
+import { config } from "./config/config";
 
 class UserFunctions {
 
@@ -9,7 +9,7 @@ class UserFunctions {
 
     async getUserById(id: number): Promise<userModel | undefined>{
         try{ 
-            const { data } = await axios.get(`http://localhost:3040/api/user/${id}`);
+            const { data } = await axios.get(`${config.URL}/api/user/${id}`);
             
             return data;
 
