@@ -1,7 +1,5 @@
 import axios from "axios";
-import jwtDecode from "jwt-decode";
 import { cardModel } from "../Models/cardModel";
-import { userModel } from "../Models/userModel";
 import { config } from "./config/config";
 import { userFunctions } from "./user";
 
@@ -9,8 +7,8 @@ class CardFunctions {
 
    async getAllCards(): Promise<cardModel[] | undefined> {
        try {
-         // const response =  await fetch(`http://localhost:3040/api/cards`, {
-         const response =  await fetch(`${config.URL}/cards`, {
+         // const response =  await fetch(`${config.URL}/api/cards`, {
+         const response =  await fetch(`${config.URL}/api/cards`, {
             mode: "cors",
          }).then(res => res.json());
          console.log(response);
@@ -26,7 +24,7 @@ class CardFunctions {
       let userid = await userFunctions.getUserId();
       
       try {
-         const response =  await fetch(`http://localhost:3040/api/cards/${userid}`, {
+         const response =  await fetch(`${config.URL}/api/cards/${userid}`, {
             mode: "cors",
          }).then(res => res.json());
          console.log(response);
@@ -95,7 +93,7 @@ class CardFunctions {
          iconsColor
       }
       try {
-         const details: cardModel = await fetch(`http://localhost:3040/api/cards`, {
+         const details: cardModel = await fetch(`${config.URL}/api/cards`, {
             mode: "cors",
             method: "POST",
             headers : {
@@ -124,7 +122,7 @@ class CardFunctions {
    async updateCard( card : cardModel, id: number ): Promise<cardModel> {
 
       try {
-         const details: cardModel = await fetch(`http://localhost:3040/api/editcard/${id}`, {
+         const details: cardModel = await fetch(`${config.URL}/api/editcard/${id}`, {
             mode: "cors",
             method: "PUT",
             headers : {
@@ -154,11 +152,11 @@ class CardFunctions {
 
    async getCard(id: number | undefined) {
       try {
-         const response =  await fetch(`http://localhost:3040/api/card/${id}`, {
+         const response =  await fetch(`${config.URL}/api/card/${id}`, {
             mode: "cors",
          }).then(res => res.json());
          
-         const image = await fetch(`http://localhost:3040/api/card/image/${id}`, {
+         const image = await fetch(`${config.URL}/api/card/image/${id}`, {
             mode: "cors",
          })
          console.log(image.url);
@@ -179,7 +177,7 @@ class CardFunctions {
          return "";
       }
       try{ 
-          const { data } = await axios.delete(`http://localhost:3040/api/cards/${id}`);
+          const { data } = await axios.delete(`${config.URL}/api/cards/${id}`);
               
           return data;
       } catch(e) {

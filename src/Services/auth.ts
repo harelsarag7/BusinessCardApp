@@ -1,12 +1,13 @@
 import axios from "axios";
 import { userModel } from "../Models/userModel";
+import { config } from "./config/config";
 
 class AuthFunctions {
 
 
     async login(username: string, password: string): Promise<string>{
         try{ 
-            const { data } = await axios.post(`http://localhost:3040/api/auth/login`, {
+            const { data } = await axios.post(`${config.URL}/api/auth/login`, {
                  username, password 
                 });
                 
@@ -19,7 +20,7 @@ class AuthFunctions {
         console.log({firstName, lastName, email, phone, username, password});
         
         try{ 
-            const { data } = await axios.post(`http://localhost:3040/api/auth/register`, {
+            const { data } = await axios.post(`${config.URL}/api/auth/register`, {
                 firstName, lastName, email, phone, username, password
                 });
                 
