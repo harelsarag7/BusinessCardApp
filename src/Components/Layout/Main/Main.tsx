@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import CardTemplate from "./CreateCard/CardTemplate/CardTemplate";
 import CardTemplate1 from "./CreateCard/CardTemplate/CardTemplate";
 import CreateCard from "./CreateCard/CreateCard";
@@ -23,8 +23,10 @@ function Main(): JSX.Element {
                 <Route path="/createcardsteps" element={<CreateCardSteps/>}></Route>
                 <Route path="/card/:id" element={<CardTemplate/>}></Route>
                 <Route path="/user" element={<UserDashboard/>}></Route>
-                <Route path="/*" element={<PageNotFound/>}></Route>
-
+                {/* <Route path="/*" element={<PageNotFound/>}></Route> */}
+                <Route path="/*">
+                     <Navigate to="/404" replace={true} />
+                </Route>
                 {/* <Route path="/allproducts" element={<AllProducts/>}></Route> */}
                 {/* <Route path="/shoes" element="shoes"></Route> */}
                 {/* <Route path="/clothes" element="clothes"></Route> */}

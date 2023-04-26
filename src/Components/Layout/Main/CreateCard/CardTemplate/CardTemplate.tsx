@@ -20,8 +20,6 @@ function CardTemplate(): JSX.Element {
     const [card, setCard] = useState<cardModel | undefined>(undefined)
 
     const CardClass = "CardTemplate" + card?.templateNum;
-    const mailTo = "mailto:" + card?.email;
-    const phoneTo = "tel:" + card?.phone;
     const Component = Components[card?.templateNum ?? 1];
     
     useEffect(() => {

@@ -1,7 +1,7 @@
 
 class Config {
 
-    URL = `http://localhost:80`
+    URL = `https://business-card-server.herokuapp.com`
 }
 
 export const config = new Config();
