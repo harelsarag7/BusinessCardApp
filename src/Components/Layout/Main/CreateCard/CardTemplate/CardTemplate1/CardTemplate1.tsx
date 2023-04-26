@@ -30,19 +30,23 @@ function CardTemplate1( { card }: { card: cardModel}): JSX.Element {
         <div className="icons">
 
         {card.email ? 
+            <a href={emailTo}>
           <div className="contact">
             <FaEnvelope color={card.iconsColor} />
-            <a href={emailTo}></a>
+
             <span>Mail</span>
           </div>
+            </a>
         : <></>}
 
         {card.phone ? 
+            <a href={phoneTo}>
           <div className="contact">
             <FaPhoneAlt color={card.iconsColor} />
-            <a href={phoneTo}></a>
+              
             <span>Phone</span>
           </div>
+            </a>
         : <></>}
 
         {card.facebook ? 
