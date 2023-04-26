@@ -65,7 +65,7 @@ function UserCard(props: {cardId: any, deleteBtn: boolean, setDeleteBtn: (e: boo
 
      function copyFunction(){
          setCopied(true)
-         navigator.clipboard.writeText(`http://localhost:3000/card/${card?.id}`)
+         navigator.clipboard.writeText(`http://www.business-card-app.com/card/${card?.id}`)
 
         setTimeout(() => {
              setCopied(false)
@@ -142,7 +142,7 @@ function UserCard(props: {cardId: any, deleteBtn: boolean, setDeleteBtn: (e: boo
                             <FacebookShareButton
                             //  navigator.clipboard.writeText
                             // url={card.facebook.toString()}
-                            url={`http://localhost:3000/card/${card?.id}`}
+                            url={`http://www.business-card-app.com/card/${card?.id}`}
                             quote={'Dummy text!'}
                             hashtag="#muo"
                             
@@ -154,7 +154,7 @@ function UserCard(props: {cardId: any, deleteBtn: boolean, setDeleteBtn: (e: boo
                         <div className="share-icons">
 
                             <WhatsappShareButton
-                            url={`http://localhost:3000/card/${card?.id}`}
+                            url={`http://www.business-card-app.com/card/${card?.id}`}
                             // quote={'Dummy text!'}
                             // hashtag="#muo"
                             >
