@@ -58,3 +58,10 @@
     padding: 1rem 2rem;
   }
 }
+@media (max-width: 680px) {
+
+  .welcome-dashboard {
+    margin-top: 50px;
+    margin-bottom: -80px;
+  }
+}

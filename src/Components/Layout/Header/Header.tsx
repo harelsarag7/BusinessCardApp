@@ -10,12 +10,11 @@ import { logout } from "../../../App/authSlice";
 import logo from "./businesscardlogo.png";
 import MobileNavBar from "./MobileNavBar/MobileNavBar";
 import Register from "../Main/Auth/Register/Register";
+import { useNavigate } from "react-router-dom";
 
 function Header(): JSX.Element {
-
-    // const [user1, setUser] = useState<userModel | undefined>(undefined)
     const dispatch = useDispatch();
-
+    const navigate = useNavigate();
     const userRedux = useSelector((state: any) => state.auth)
 
     useEffect(() => {
@@ -43,7 +42,7 @@ function Header(): JSX.Element {
         <div className="Header">
             <div className="container">
                
-                <div className="logo"><img src={logo} alt="" /></div>
+                <div className="logo" onClick={() => navigate("/")}><img src={logo} alt="" /></div>
 		    	
                 <div className="categories-container">
 			        <div className="categories">

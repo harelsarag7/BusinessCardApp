@@ -84,8 +84,15 @@ export default function BasicModalDialog() {
               <TextField label="Password" type="password"  required {...register("password")} />
               <TextField label="firstName" required {...register("firstName")} />
               <TextField label="lastName" required {...register("lastName")} />
-              <TextField label="email" type="email" required {...register("email")} />
-              <TextField label="phone" type="tel" required {...register("phone")} />
+              <div className="not_required_container">
+                <span className="not_required_span">Not required</span>
+                <TextField className="not_required_input" label="email" type="email" {...register("email")} />
+              </div>
+
+              <div className="not_required_container">
+                <span className="not_required_span">Not required</span>
+                <TextField label="phone" className="not_required_input"  type="tel" {...register("phone")} />
+              </div>
               <Button type="submit" variant="contained">Submit</Button>
             </Stack>
             <Typography
