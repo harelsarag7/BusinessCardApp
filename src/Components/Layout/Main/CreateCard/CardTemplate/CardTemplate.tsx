@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { cardModel } from "../../../../../Models/cardModel";
 import { cardFunctions } from "../../../../../Services/cards";
 import "./CardTemplate.css";
@@ -17,17 +17,23 @@ const Components: Record<number, CardComponentType> = {
 
 function CardTemplate(): JSX.Element {
     let id = useParams();
+    const navigate = useNavigate();
     const [card, setCard] = useState<cardModel | undefined>(undefined)
+    const [loading, setLoading] = useState<boolean>(true);
 
     const CardClass = "CardTemplate" + card?.templateNum;
     const Component = Components[card?.templateNum ?? 1];
     
     useEffect(() => {
-       const idNum: any= id.id
+        setLoading(true)
+        const idNum: any= id.id
         cardFunctions.getCard(idNum).then(res => {
             console.log(res);
-            
+            if(!res){
+                navigate("/404")
+            }
             setCard(res);
+            setLoading(false);
             
         });
     }, [])
@@ -37,7 +43,20 @@ function CardTemplate(): JSX.Element {
             {/* {card?.template == 1? <CardTemplate1 key={card.id} card={card}/>
              : card?.template === 2? " WRONG Card template is 2"
               : "No template"} */}
+
+              {loading? 
+              <div className="loading Card">
+                <div className="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+              </div>
+              : 
               <Component key={card?.id} card={card ?? {}}/>
+            }
 
         </div>
     );
