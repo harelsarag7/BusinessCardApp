@@ -16,20 +16,11 @@ function Main(): JSX.Element {
 			<Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/home" element={<Home/>}></Route>
-                {/* <Route path="/aboutus" element="About Us"></Route> */}
-                {/* <Route path="/contact" element="Contact"></Route> */}
-                {/* <Route path="/blog" element="Blog"></Route> */}
                 <Route path="/createcard" element={<CreateCard/>}></Route>
                 <Route path="/createcardsteps" element={<CreateCardSteps/>}></Route>
                 <Route path="/card/:id" element={<CardTemplate/>}></Route>
                 <Route path="/user" element={<UserDashboard/>}></Route>
-                {/* <Route path="/*" element={<PageNotFound/>}></Route> */}
-                <Route path="/*">
-                     <Navigate to="/404" replace={true} />
-                </Route>
-                {/* <Route path="/allproducts" element={<AllProducts/>}></Route> */}
-                {/* <Route path="/shoes" element="shoes"></Route> */}
-                {/* <Route path="/clothes" element="clothes"></Route> */}
+                <Route path="/*" element={<PageNotFound/>}></Route>
 			</Routes>
         </div>
     );
