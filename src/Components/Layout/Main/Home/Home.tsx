@@ -1,6 +1,6 @@
 import Register from "../Auth/Register/Register";
 import "./Home.css";
-// import KeyboardArrowRightIcon from '../Home/';
+import iphonemockup from "./iphonemockup.png";
 function Home(): JSX.Element {
     return (
         <div className="Home">
@@ -16,7 +16,7 @@ function Home(): JSX.Element {
                 </div>
                 </div>
                 <div className="img-home">
-                    <img src="https://digitalicard.co.il/wp-content/uploads/2020/12/smartmockups_k9i37ssa-min.png" alt="" />
+                    <img src={iphonemockup} alt="" />
                 </div>
             </div>
         </div>
