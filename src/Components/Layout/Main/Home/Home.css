@@ -27,7 +27,7 @@
     font-size: 20px;
 }
 .home-sign-up {
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
@@ -151,16 +151,37 @@
     }
 }
 
-@media only screen and (max-width: 450px) {
-    .img-home img {
-        width: 150px;
+@media only screen and (max-width: 485px) {
+    .home-container {
+        flex-direction: column;
     }
+}
 
+@media only screen and (max-width: 500px) {
+    .Home {
+        margin: 20px auto;
+    }
+    .img-home img {
+        width: 200px;
+        margin: 0 auto;
+    }
+    .img-home {
+        top: 0;
+        left: 50px;
+    }
+    .home-title-sign {
+        order: 2;
+    }
+    .home-sign-up{
+        justify-content: center;
+    }
     h1 {
-        font-size: 25px;
+        font-size: 35px;
+        text-align: center;
     }
     .home-container {
         left: 10px;
+        gap: 25px;
     }
     .img-home {
         position: relative;
