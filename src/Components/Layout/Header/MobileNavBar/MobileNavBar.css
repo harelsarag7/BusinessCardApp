@@ -5,20 +5,22 @@
 .MobileNavBar .nav_mobile {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     position: absolute;
     border-radius: 5px;
     background-color: #9689D5;
     z-index: 999 !important;
+    font-size: 18px;
 
 }
 
 .MobileNavBar .nav_mobile a {
     border-bottom: none !important;
     outline: none;
-    padding: 5px;
+    padding: 10px;
+    color: white;
 
-    color: #292929;
+    /* color: #292929; */
 }
 
 .MobileNavBar .nav_mobile a .active {

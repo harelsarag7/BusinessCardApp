@@ -58,6 +58,7 @@
 }
 .logo {
     padding: 10px;
+    cursor: pointer;
 }
 .logo img{
     position: relative;

@@ -1,11 +1,17 @@
-/* .Register {
-	
-} */
-/* .register {
-	
-} */
 #register-modal {
     border: 1px solid lightgrey;
+}
+
+.not_required_container {
+position: relative;
+}
+.not_required_container .not_required_input {
+    width: 100% !important;
+}
+.not_required_span {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
 }
 
 #wrong-password-username {
