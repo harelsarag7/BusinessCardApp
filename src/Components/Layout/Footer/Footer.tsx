@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Login from "../Main/Auth/Login/Login";
 import Register from "../Main/Auth/Register/Register";
 import "./Footer.css";
@@ -10,6 +10,8 @@ function Footer(): JSX.Element {
         
     const userRedux = useSelector((state: any) => state.auth)
     const [open, setOpen] = useState(false);
+    const location = useLocation();
+    const [display, setDisplay] = useState<boolean>(true)
     const handleOpen = () => {
       setOpen(true);
     };
@@ -34,15 +36,17 @@ function Footer(): JSX.Element {
 
     useEffect(() => {
         console.log(userRedux);
+        if (location.pathname.includes('/card/')) {
+          setDisplay(false);
+        }
     }, [userRedux])
     return (
-      <footer className="footer">
+      <footer className={display? "footer" : `none`}>
         <div className="start-learning">
           <div className="footer-start">
             <div className="texts">
               <h2 className="section-title">Start introducing yourself</h2>
               <h3 className="section-sub-heading">
-                {/* <span> PREMIUM Cards - Only</span><strong> $5 </strong> */}
                 <span> Coming Soon - PREMIUM Cards - Only</span>
                 <strong> $5 </strong>
                 <span>for a</span> <strong>One year</strong>
@@ -54,17 +58,6 @@ function Footer(): JSX.Element {
           </div>
         </div>
         <div className="inner">
-          {/* <div className="column is-logo">
-                <a href="#" className="main-logo">
-                    <div className="logo">
-                        <img src="logo.png" alt="stackfindover"/>
-                    </div>
-                    <div className="logo-info">
-                        <div className="text">Stackfindover</div>
-                        <span className="copyright">© 2021. All rights reserved.</span>
-                    </div>
-                </a>
-            </div> */}
           <div className="column is-nav">
             <div className="column-title">Navigation</div>
             <ul>
@@ -98,8 +91,8 @@ function Footer(): JSX.Element {
             {/* <div className="column-title">Blog</div> */}
             {userRedux ? (
               <></>
-            ) : (
-              <ul>
+              ) : (
+                <ul>
                 <li>
                   <Register />
                 </li>
@@ -112,17 +105,16 @@ function Footer(): JSX.Element {
         </div>
 
         <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="parent-modal-title"
-          aria-describedby="parent-modal-description"
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="parent-modal-title"
+        aria-describedby="parent-modal-description"
         >
           <Box sx={{ ...style, width: 250 }}>
             <h2 id="parent-modal-title">Coming soon...</h2>
           </Box>
         </Modal>
       </footer>
-      // </div>
     );
 }
 

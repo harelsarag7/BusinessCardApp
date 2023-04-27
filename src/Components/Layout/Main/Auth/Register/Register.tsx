@@ -28,8 +28,9 @@ export default function BasicModalDialog() {
           setWrong("This Username is already taken ")
           return 
         }
-
-          navigate(`/user`);
+        if (window.location.pathname === "/" || window.location.pathname === "/home") {
+          navigate("/user");
+        }
           setOpen(false);
           dispatch(login(res));
       })
