@@ -5,6 +5,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.none {
+    display: none !important;
+}
 ul { list-style: none; }
 a { text-decoration: unset; }
 a:hover { text-decoration: underline; }

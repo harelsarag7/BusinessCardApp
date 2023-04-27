@@ -1,11 +1,8 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import CardTemplate from "./CreateCard/CardTemplate/CardTemplate";
-import CardTemplate1 from "./CreateCard/CardTemplate/CardTemplate";
 import CreateCard from "./CreateCard/CreateCard";
 import CreateCardSteps from "./CreateCardSteps/CreateCardSteps";
-// import CreateCardSteps from "./CreateCardSteps/CreateCardSteps";
 import Home from "./Home/Home";
-// import AllProducts from "./AllProducts/AllProducts";
 import "./Main.css";
 import PageNotFound from "./PageNotFound/PageNotFound";
 import UserDashboard from "./UserDashboard/UserDashboard";
