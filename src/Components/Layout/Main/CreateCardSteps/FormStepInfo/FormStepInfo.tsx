@@ -47,6 +47,10 @@ function FormStepInfo( { onclick, stepBackButton}: clicksForm2Model ): JSX.Eleme
         
         dispatch(info( card))
         onclick();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
     }
     const [card, setCard] = useState<cardModel>()
     const Component = Components[cardRedux?.templateNum ?? cardRedux ?? 2 ];
