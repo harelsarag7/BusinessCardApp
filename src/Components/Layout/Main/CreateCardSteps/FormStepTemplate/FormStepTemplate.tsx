@@ -37,6 +37,10 @@ function FormStepTemplate( { onclick, stepBackButton}: clicksForm2Model ): JSX.E
         dispatch(template(templateNum))
         nextChoseTemplate();
         onclick()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
     }
 
     useEffect(() => {
